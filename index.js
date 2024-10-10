@@ -5,7 +5,7 @@ import 'dotenv/config'
 
 
 const app = express()
-const port = '3000'
+const port = process.env.PORT
 const API_KEY = process.env.NEWS_API_KEY
 const API_URL = 'https://newsapi.org/v2/'
 const config = {
