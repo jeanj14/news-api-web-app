@@ -19,7 +19,7 @@ app.use(express.static("public"))
 
 // Create an AXIOS GET response to the NewsAPI in order to get the top headlines
 
-setInterval(app.get("/", async (req, res) => {
+app.get("/", async (req, res) => {
     // Send out 3 different API requests to fetch 3 different types of data
     // each request is for a category of news articles : business, technology and sports
     // they will be rendered into the EJS template and displayed as articles
@@ -38,7 +38,7 @@ setInterval(app.get("/", async (req, res) => {
         console.error(error);
         // res.render(JSON.stringify(error))
     }
-}), interval)
+})
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`)
